@@ -216,3 +216,6 @@ footer{padding-top:36px}
 	footer{padding-top:30px}
 	.footer-inner{padding-bottom:30px}
 }
+.hero-copy>p.hero-positioning{max-width:500px;margin:-8px 0 12px;color:#315b49;font-size:clamp(18px,1.8vw,22px);font-weight:650;line-height:1.35;letter-spacing:-.035em}
+.hero-copy>p.hero-summary{max-width:500px;margin:0;color:#5e736b;font-size:14px;line-height:1.65}
+@media(max-width:650px){.hero-copy>p.hero-positioning{font-size:19px}.hero-copy>p.hero-summary{font-size:14px}}
