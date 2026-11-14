@@ -14,7 +14,7 @@ const projects = [
   },
   {
     number: '02', name: 'LazyTravel', category: 'A little curiosity, a lot of possibility', label: 'AI TRAVEL PLANNER',
-    description: 'A travel planner for the places that don’t make the first page of search results.',
+    description: 'An agentic AI travel planner for the places that don’t make the first page of search results.',
     detail: 'A research agent looks for hidden gems, a budget agent narrows the options, and a small language model brings it all together into an itinerary.',
     tags: ['Agentic AI', 'Research', 'Product design'], kind: 'travel'
   }
