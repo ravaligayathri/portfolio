@@ -23,58 +23,58 @@ const projects = [
 const work = [
   {
     index: '01', navLabel: 'Modernization', title: 'Modernizing without interrupting the business', field: 'PLATFORM ENGINEERING',
-    summary: 'A financial services modernization program spanning 300 applications and 18 months.',
-    challenge: 'Critical services running on aging virtual machines needed a path to containers that teams could adopt without losing reliability.',
-    approach: 'Designed reusable Helm templates and right-sized pod resources from existing performance data. Planned disaster recovery and a coexistence model so teams could transition traffic between environments.',
-    outcome: 'Approximately $5M in infrastructure savings and 30% higher system throughput.',
+    summary: 'Modernized 300 financial services applications in 18 months.',
+    challenge: 'Aging virtual machine workloads needed a reliable path to containers.',
+    approach: 'Built reusable Helm templates, right-sized pods, and planned disaster recovery and phased traffic migration.',
+    outcome: 'About $5M in infrastructure savings and 30% higher throughput.',
     tools: 'RED HAT OPENSHIFT / KUBERNETES / HELM / JAVA / PYTHON'
   },
   {
-    index: '02', navLabel: 'Data pipelines', title: 'A better home for data pipelines', field: 'DATA ENGINEERING',
-    summary: 'Reworking hundreds of Spark ETL jobs for a containerized world.',
-    challenge: 'ETL jobs depended on VM-based scheduling, network storage and file transfers that did not map directly to containers.',
-    approach: 'Redesigned Spark workloads for spark-submit cluster mode with driver and executor pods; adapted SFTP, replaced NAS storage patterns with persistent volume claims, and converted schedules to Kubernetes Jobs.',
-    outcome: 'Hundreds of Spark ETL jobs moved to OpenShift; the wider program converted over 1,000 scheduled jobs.',
+    index: '02', navLabel: 'Payments', title: 'Making payment services more resilient', field: 'FINANCIAL SERVICES / ENGINEERING',
+    summary: 'Improved fraud detection and resilience for card payments.',
+    challenge: 'Card networks needed reliable connections and faster fraud detection.',
+    approach: 'Led five releases of Java and Kafka services deployed on AWS. Used Hystrix circuit breakers for card network calls, with Docker and Jenkins for CI/CD.',
+    outcome: 'Improved fraud detection 10x, processed 150 TPS with a 0.05% error margin, and cut connection failures by 95%.',
+    tools: 'JAVA / SPRING BOOT / KAFKA / AWS / HYSTRIX / DOCKER / JENKINS'
+  },
+  {
+    index: '03', navLabel: 'Data pipelines', title: 'A better home for data pipelines', field: 'DATA ENGINEERING',
+    summary: 'Replatformed Spark ETL jobs from VMs to OpenShift.',
+    challenge: 'VM based scheduling, NAS storage, and SFTP dependencies tied ETL jobs to legacy infrastructure.',
+    approach: 'Ran Spark in cluster mode on OpenShift with driver and executor pods. Replaced NAS storage patterns with persistent volume claims (PVCs), adapted SFTP connectivity, and moved batch scheduling to Kubernetes Jobs.',
+    outcome: 'Moved hundreds of jobs; the wider program converted over 1,000 scheduled jobs.',
     tools: 'APACHE SPARK / PYTHON / SFTP / KUBERNETES / OPENSHIFT'
   },
   {
-    index: '03', navLabel: 'Agentic SDLC', title: 'Making the SDLC a little less manual', field: 'AGENTIC AI / SOFTWARE DELIVERY',
-    summary: 'Building AI-assisted workflows that support engineers from code understanding through delivery.',
-    challenge: 'Legacy modernization asks engineers to understand unfamiliar code, translate business logic, test behavior and prepare deployments—all while keeping humans responsible for the result.',
-    approach: 'Designed agentic workflows for code comprehension, translation, test generation and deployment, using watsonx to assist mainframe-to-Java modernization. Also built an SDLC-focused AI solution using Project Bob and worked with Copilot Studio on a separate engagement. Engineers reviewed and corrected generated output.',
-    outcome: 'Supported the modernization of 110 applications and reduced re-engineering time by approximately one third.',
-    tools: 'IBM WATSONX / WATSON STUDIO / PROJECT BOB / COPILOT STUDIO / JAVA'
+    index: '04', navLabel: 'Agentic SDLC', title: 'Automating the modernization SDLC', field: 'AGENTIC AI / SOFTWARE DELIVERY',
+    summary: 'Automated legacy modernization from code discovery through delivery.',
+    challenge: 'Unfamiliar mainframe code slowed safe modernization.',
+    approach: 'Built an IBM watsonx multiagent workflow to explain legacy code, generate Java services, support code review and testing, and automate deployment, with engineers validating output.',
+    outcome: 'Converted 110 mainframe services to Java microservices and cut SDLC cycle time by 33%.',
+    tools: 'IBM WATSONX / WATSON STUDIO / PROJECT BOB / JAVA'
   },
   {
-    index: '04', navLabel: 'API architecture', title: 'From three APIs to a bigger idea', field: 'SOLUTIONS ARCHITECTURE',
-    summary: 'A proof of concept that grew into a 50-API modernization engagement.',
-    challenge: 'A banking team needed a credible path from existing integration APIs to maintainable Java services under tight deadlines.',
-    approach: 'Built three APIs for an executive demo, defined Java standards, and automated parts of API Connect migration and OpenShift configuration.',
-    outcome: 'The proof of concept helped secure a $1M engagement for 50 APIs.',
+    index: '05', navLabel: 'API architecture', title: 'From three APIs to a bigger idea', field: 'SOLUTIONS ARCHITECTURE',
+    summary: 'Built an API proof of concept for a global bank.',
+    challenge: 'A bank needed a maintainable Java integration platform on a tight timeline.',
+    approach: 'Built three demo APIs, set Java standards, and automated parts of API Connect migration and OpenShift setup.',
+    outcome: 'Won a $1M engagement to modernize 50 APIs.',
     tools: 'JAVA / SPRING BOOT / IBM API CONNECT / OPENSHIFT / CI/CD'
   },
   {
-    index: '05', navLabel: 'Machine learning', title: 'Finding malicious signals in network logs', field: 'MACHINE LEARNING ENGINEERING',
-    summary: 'Building and exploring malware classification models during my FireEye internship.',
-    challenge: 'Security analysts needed a way to find suspicious content within large network logs.',
-    approach: 'Built eight classification models with Python, scikit-learn and NLP; explored patterns with clustering and dimensionality reduction, and created an interface to score log files.',
-    outcome: 'Analysis surfaced 350 false-negative URLs and a recommendation to improve detection rules.',
+    index: '06', navLabel: 'Machine learning', title: 'Finding malicious signals in network logs', field: 'MACHINE LEARNING ENGINEERING',
+    summary: 'Built malware classifiers during a FireEye internship.',
+    challenge: 'Analysts needed to find suspicious content in large network logs.',
+    approach: 'Built eight Python classifiers with scikit-learn and NLP, then used clustering and dimensionality reduction to investigate misses.',
+    outcome: 'Models exceeded 90% accuracy; analysis surfaced 350 false negatives and informed rule updates.',
     tools: 'PYTHON / SCIKIT-LEARN / TF-IDF / K-MEANS / NLP'
   },
   {
-    index: '06', navLabel: 'Payments', title: 'Making payment services more resilient', field: 'FINANCIAL SERVICES / ENGINEERING',
-    summary: 'Building and improving real-time fraud detection and payment integrations.',
-    challenge: 'Card transactions needed dependable network connections and faster fraud detection.',
-    approach: 'Led five releases, built Java and Kafka microservices, and designed a load balancer with failover and failback.',
-    outcome: '10x fraud detection improvement; 150 transactions per second with under 0.05% error; 95% fewer connectivity failures.',
-    tools: 'JAVA / SPRING BOOT / KAFKA / AWS / JENKINS'
-  },
-  {
     index: '07', navLabel: 'Leadership', title: 'Helping teams do their best work', field: 'ENGINEERING LEADERSHIP',
-    summary: 'Leading distributed, cross-functional teams of 25–30 through technical change and complex delivery.',
-    challenge: 'Big changes are easier to deliver when people understand the decisions, have room to raise concerns, and can get help when they are stuck.',
-    approach: 'Set technical direction through strategy and architecture reviews; owned delivery planning and dependencies, aligned stakeholders, and supported hiring, mentoring and performance management.',
-    outcome: 'Clear technical decisions and delivery alignment, with engineers supported through coaching, feedback and room to grow.',
+    summary: 'Led distributed teams of 25 to 30 through technical change.',
+    challenge: 'Teams needed clear decisions, ownership, and support through complex delivery.',
+    approach: 'Set architecture direction, managed plans and dependencies, aligned stakeholders, and coached engineers.',
+    outcome: 'Improved delivery alignment through clear technical direction and ongoing coaching.',
     tools: 'ENGINEERING LEADERSHIP / TECHNICAL STRATEGY / DELIVERY OWNERSHIP / HIRING & DEVELOPMENT'
   }
 ]
@@ -161,7 +161,7 @@ function App() {
       <section id="home" className="hero wrap"><div className="hero-copy"><div className="hero-eyebrow"><span className="signal-dot"/> ENGINEERING / CLOUD / AI</div><h1><span>Complex systems.</span><br/>Clear direction.</h1><p className="hero-positioning">I lead engineering teams that build SaaS products and cloud platforms, migrate and modernize enterprise systems, and develop AI solutions.</p><p className="hero-summary">13+ years turning enterprise complexity into dependable products for financial services and global organizations.</p><div className="hero-links"><a className="primary-link" href="#work">Explore my work <ArrowDown size={16}/></a><a className="secondary-link" href="#about">More about me <ArrowUpRight size={15}/></a></div></div><div className="hero-diagram" aria-hidden="true"><div className="diagram-top"><span>HOW I WORK</span><span>01—03</span></div><div className="diagram-main approach-steps"><div className="approach-step"><span className="approach-number">01</span><div className="approach-copy"><strong>Set direction</strong><small>Connect technical choices to business outcomes.</small></div><span className="approach-mark">↘</span></div><div className="approach-step"><span className="approach-number">02</span><div className="approach-copy"><strong>Design for change</strong><small>Build platforms that evolve with the need.</small></div><span className="approach-mark">↘</span></div><div className="approach-step"><span className="approach-number">03</span><div className="approach-copy"><strong>Deliver together</strong><small>Give teams clarity, trust, and room to grow.</small></div><span className="approach-mark approach-mark-last">↗</span></div></div><div className="diagram-footer"><span>STRATEGY / ARCHITECTURE / DELIVERY</span><span>PEOPLE FIRST</span></div></div></section>
       <div className="focus-bar"><div className="wrap focus-inner"><span>WHERE I CREATE IMPACT</span><div><span>Team & delivery leadership</span><i>✳</i><span>Cloud platforms</span><i>✳</i><span>Applied AI</span></div></div></div>
 
-      <section id="work" className="section work-section"><div className="wrap"><div className="section-head"><div><span className="section-label">01 / SELECTED EXPERIENCE</span><h2>Real problems.<br/><span>Measurable outcomes</span></h2></div><p>Seven stories across cloud modernization, data, agentic AI, APIs, machine learning, payments, and leading teams—each grounded in the decisions and people behind the outcome.</p></div><WorkCarousel/></div></section>
+      <section id="work" className="section work-section"><div className="wrap"><div className="section-head"><div><span className="section-label">01 / SELECTED EXPERIENCE</span><h2>Real problems.<br/><span>Measurable outcomes</span></h2></div><p>Explore my work across cloud modernization, data engineering, agentic AI, APIs, machine learning, payments, and engineering leadership. Each case study shares the key decisions, collaboration, and measurable results.</p></div><WorkCarousel/></div></section>
 
       <section id="about" className="section about-section"><div className="wrap about-grid"><div><span className="section-label">02 / ABOUT ME</span><h2>Better work starts<br/><span>with people</span></h2></div><div className="about-copy"><p className="about-lede">I care as much about helping engineers grow as I do about building systems that work well.</p><p>Over 13+ years, I’ve led distributed teams, worked through production issues, and built cloud, data, and AI solutions for enterprise clients. I enjoy turning complex challenges into clear plans and helping teams do their best work.</p><p>I’m an engineer at heart: I still design, code, troubleshoot, and experiment. Outside work, I mentor with Girls Who Code, speak at technology events, and keep building ideas of my own.</p><a className="text-link" href="https://www.linkedin.com/in/ravalik" target="_blank" rel="noreferrer">More about my journey <ArrowUpRight size={16}/></a></div><div className="toolbox"><div className="toolbox-title"><span>THE TOOLBOX</span><span>01—04</span></div><div><span>01</span><p><strong>Cloud & platform</strong><small>OpenShift, Kubernetes, AWS, Helm</small></p></div><div><span>02</span><p><strong>Code & data</strong><small>Java, Python, Spring Boot, Spark, Kafka</small></p></div><div><span>03</span><p><strong>Applied AI</strong><small>watsonx, Copilot Studio, LLM workflows</small></p></div><div><span>04</span><p><strong>People & perspective</strong><small>Leadership, mentoring, problem solving</small></p></div></div></div></section>
 
